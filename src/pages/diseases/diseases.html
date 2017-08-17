@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Disease  Entry</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label floating >Disease Name</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="diseasename"
+          name="diseasename"
+          required></ion-input>
+      </ion-item>
+     </ion-list>
+    <button ion-button block (click)="addDisease()">Add Disease</button>
+    <ion-list >
+       <ion-item *ngFor="let item of diseaselist " >  
+        {{ item.$value  }} 
+       </ion-item>
+    </ion-list>
+
+</ion-content>

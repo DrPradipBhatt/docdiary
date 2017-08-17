@@ -1,0 +1,55 @@
+<!--
+  Generated template for the EditvisitPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Visit {{pt?.ptname}} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form #form="ngForm" novalidate >
+        <ion-list>
+        
+         <ion-item>  
+         Name  : {{pt?.ptname}}
+         </ion-item>  
+         <ion-item>  
+         Date : {{visit?.visitdate }}
+         </ion-item>  
+         
+        <ion-item>
+           <ion-label floating>Diagnosis</ion-label>
+           <ion-input type="text" required name="diagnosis" [(ngModel)]="visit.diagnosis" ></ion-input>
+        </ion-item>
+       <ion-item>
+        
+        <Button ion-button full [disabled]="form.invalid" (click)="updatevisit()" >Save Diagnosis</Button>
+        <Button ion-button full (click)="takephoto(1)" >Take Photo-1</Button>
+         <img *ngIf="visit.photourl1" [src]="visit?.photourl1"   width="100%" >
+         
+         <Button *ngIf="visit.photourl1" ion-button full (click)="takephoto(2)" >Take Photo-2</Button>
+         <img *ngIf="visit.photourl2" [src]="visit?.photourl2"   width="100%" >
+         
+         <Button *ngIf="visit.photourl2" ion-button full (click)="takephoto(3)" >Take Photo-2</Button>
+         <img *ngIf="visit.photourl3" [src]="visit?.photourl3"   width="100%" >
+        
+         <Button *ngIf="visit.photourl3" ion-button full (click)="takephoto(4)" >Take Photo-2</Button>
+         <img *ngIf="visit.photourl4" [src]="visit?.photourl4"   width="100%" >
+      
+         <Button *ngIf="visit?.photourl4" ion-button full (click)="takephoto(5)" >Take Photo-2</Button>
+         <img *ngIf="visit?.photourl5" [src]="visit?.photourl5"   width="100%" >
+    
+        </ion-item>
+        <input type="file" id="btnUpload"  style="display:none;"  (change)="onBtnUploadChange($event)" />
+       
+        </ion-list>
+       </form> 
+
+</ion-content>

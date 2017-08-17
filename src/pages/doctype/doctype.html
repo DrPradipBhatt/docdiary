@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Document Types  Entry</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label floating >Document Type</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="doctypename"
+          name="doctypename"
+          required></ion-input>
+      </ion-item>
+     </ion-list>
+    <button ion-button block (click)="addDoctype()">Add Document Type</button>
+    <ion-list >
+       <ion-item *ngFor="let item of doctypelist " >  
+        {{ item.$value  }} 
+       </ion-item>
+    </ion-list>
+
+</ion-content>

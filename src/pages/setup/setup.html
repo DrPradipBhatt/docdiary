@@ -1,0 +1,46 @@
+<!--
+  Generated template for the SetupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>setup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Doctor Name</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]='docname'
+          name="docname"
+          required></ion-input>
+      </ion-item>
+ <ion-item>
+        <ion-label fixed>Qualification</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="docqualification"
+          name="docqualification"
+          required></ion-input>
+      </ion-item>
+ <ion-item>
+        <ion-label fixed>Clinic Name</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="clinicname"
+          name="clicname"
+          required></ion-input>
+      </ion-item>
+     </ion-list>
+    <button ion-button block type="submit" [disabled]="!f.valid">Submit </button>
+  </form>
+</ion-content>
