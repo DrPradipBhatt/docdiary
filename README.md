@@ -18,3 +18,4 @@ Near future enhancement
 
 At the Same time I am willing to contribute  with Medical Record Keeping software Development in  
 Angular/Ionic/React/ReactNative projects upto full fleged Medical Science integration in software  
+My Email is pradipbhatt.developer@gmail.com 
